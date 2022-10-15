@@ -1,21 +1,22 @@
 package dad.login;
 
-import dad.login.ver.VerView;
+import dad.login.Login.LoginController;
+import dad.login.Login.LoginView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application{
 
-    private VerView view;
+    private LoginView view;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         
-        view = new VerView();
+        LoginController controller = new LoginController();
 
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(view));
+        primaryStage.setScene(new Scene(controller.getView()));
         primaryStage.show();
 
     }
