@@ -1,13 +1,14 @@
 package dad.login.Login;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 // java fx bean
 
 public class LoginModel {
     
-    private StringProperty usuario;
-    private StringProperty passwdString;
+    private StringProperty usuario = new SimpleStringProperty();
+    private StringProperty passwdString = new SimpleStringProperty();
 
     public String getUsuarioText() {
         return this.usuario.getValue();
@@ -18,7 +19,7 @@ public class LoginModel {
     }
 
     public String getPasswdText() {
-        return this.usuario.getValue();
+        return this.passwdString.getValue();
     }
 
     public void setPasswdText(String texto) {
@@ -27,6 +28,10 @@ public class LoginModel {
 
     public StringProperty usuarioProperty() {
         return usuario;
+    }
+
+    public StringProperty passwdProperty() {
+        return passwdString;
     }
 
 }

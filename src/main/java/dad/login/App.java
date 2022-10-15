@@ -16,7 +16,7 @@ public class App extends Application{
         LoginController controller = new LoginController();
 
         primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(controller.getView()));
+        primaryStage.setScene(new Scene(controller.getView(), 300, 200));
         primaryStage.show();
 
     }
