@@ -45,7 +45,8 @@ public class LoginView extends VBox {
         datosPanel.setAlignment(Pos.CENTER);
         setSpacing(5);
         setPadding(new Insets(5));
-
+        setAlignment(Pos.CENTER);
+        
     }
 
     public TextField usuarioProperty() {
