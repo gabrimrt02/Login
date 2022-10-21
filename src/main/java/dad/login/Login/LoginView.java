@@ -30,22 +30,23 @@ public class LoginView extends VBox {
         cancelarButton = new Button("Cancelar");
 
         botonesPanel = new HBox(5, accederButton, cancelarButton);
+        botonesPanel.setAlignment(Pos.CENTER);
+        accederButton.setDefaultButton(true);
+
         datosPanel = new GridPane();
 
         datosPanel.addRow(0, new Label("Usuario: "), usuarioText = new TextField());
         datosPanel.addRow(1, new Label("Contraseña: "), passwdField = new PasswordField());
         datosPanel.add(ldapBox = new CheckBox("Usar LDAP"), 1, 2);
+        
+        datosPanel.setAlignment(Pos.CENTER);
+        datosPanel.setHgap(5);
+        datosPanel.setVgap(5);
 
         getChildren().addAll(
             datosPanel,
             botonesPanel
         );
-
-        botonesPanel.setAlignment(Pos.CENTER);
-
-        datosPanel.setAlignment(Pos.CENTER);
-        datosPanel.setHgap(5);
-        datosPanel.setVgap(5);
         
         setSpacing(5);
         setPadding(new Insets(5));
