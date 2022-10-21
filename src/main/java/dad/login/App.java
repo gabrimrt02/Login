@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 public class App extends Application{
 
-    // TODO Crear la variable static primaryStage
     public static Stage primaryStage;
 
     private LoginController controller;
