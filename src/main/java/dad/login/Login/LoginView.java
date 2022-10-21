@@ -42,7 +42,11 @@ public class LoginView extends VBox {
         );
 
         botonesPanel.setAlignment(Pos.CENTER);
+
         datosPanel.setAlignment(Pos.CENTER);
+        datosPanel.setHgap(5);
+        datosPanel.setVgap(5);
+        
         setSpacing(5);
         setPadding(new Insets(5));
         setAlignment(Pos.CENTER);

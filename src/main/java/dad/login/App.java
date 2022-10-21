@@ -7,11 +7,18 @@ import javafx.stage.Stage;
 
 public class App extends Application{
 
+    // TODO Crear la variable static primaryStage
+    public static Stage primaryStage;
+
+    private LoginController controller;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
-        
-        LoginController controller = new LoginController();
 
+        App.primaryStage = primaryStage;
+        
+        controller = new LoginController();
+        
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(controller.getView(), 300, 200));
         primaryStage.show();
