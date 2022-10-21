@@ -13,7 +13,6 @@ public class LoginController {
     private LoginView view = new LoginView();
     private LoginModel model = new LoginModel();
 
-    
     public LoginController() {
         view.usuarioProperty().textProperty().bindBidirectional(model.usuarioProperty());
         view.passwdProperty().textProperty().bindBidirectional(model.passwdProperty());
