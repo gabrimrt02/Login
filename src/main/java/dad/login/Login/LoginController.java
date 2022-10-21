@@ -13,25 +13,25 @@ public class LoginController {
     private LoginView view = new LoginView();
     private LoginModel model = new LoginModel();
 
-    private AuthService auth;
-
+    
     public LoginController() {
         view.usuarioProperty().textProperty().bindBidirectional(model.usuarioProperty());
         view.passwdProperty().textProperty().bindBidirectional(model.passwdProperty());
-
+        
         view.getCancelarButton().setOnAction(this::onCancelarAction);
         view.getAccederButton().setOnAction(this::onAccederAction);
-
+        
         view.ldapCheckBox().selectedProperty().bindBidirectional(model.useLDAPProperty());;
-
+        
     }
-
+    
     private void onCancelarAction(ActionEvent e) {
         App.primaryStage.close();
     }
-
+    
     private void onAccederAction(ActionEvent e) {
         
+        AuthService auth;
         auth = model.getUseLDAP() ? new LdapAuthService() : new FileAuthService();
 
         try {
