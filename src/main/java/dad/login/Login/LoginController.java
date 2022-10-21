@@ -20,7 +20,7 @@ public class LoginController {
         view.getCancelarButton().setOnAction(this::onCancelarAction);
         view.getAccederButton().setOnAction(this::onAccederAction);
         
-        view.ldapCheckBox().selectedProperty().bindBidirectional(model.useLDAPProperty());;
+        view.ldapCheckBox().selectedProperty().bindBidirectional(model.useLDAPProperty());
         
     }
     
